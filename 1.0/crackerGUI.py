@@ -31,7 +31,7 @@ def main():
     label_heading = ctk.CTkLabel(root, text='Crack me a river', font=('Ariel', 24))
     label_heading.pack(padx=60, pady=20, side=ctk.TOP, fill=ctk.BOTH, expand=False)
 
-    label_pic = ctk.CTkLabel(root, image=ctk.CTkImage(Image.open("./images/fawkes.jpg"), size=(100,100)), text='')
+    label_pic = ctk.CTkLabel(root, image=ctk.CTkImage(Image.open("1.0/images/fawkes.jpg"), size=(100,100)), text='')
     label_pic.pack(padx=60, pady=20, side=ctk.TOP, fill=ctk.BOTH, expand=False)
     
     xl_file_path = ctk.CTkEntry(root, placeholder_text="+ Smid fil her", justify='center')
@@ -43,6 +43,7 @@ def main():
     global label_done
     label_done = ctk.CTkLabel(root, text='', font=('Ariel', 16))
 
+    
     def crack_selected_xl_file():
         result = xl_file_path.cget("placeholder_text")
         if result[0] == "{":
