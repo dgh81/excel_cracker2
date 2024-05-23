@@ -9,6 +9,7 @@ def crack(dir_file_path):
 
         for ws in wb.worksheets:
             ws.protection.sheet = False
+        wb.security.lockStructure = False
         wb.save(dir_file_path)
         wb.close()
     except:

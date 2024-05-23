@@ -19,7 +19,7 @@ def main():
 
     root.geometry('600x400')
     # root.iconbitmap('./images/icon.ico')
-    root.title('Excel Sheets Password Cracker')
+    root.title('Excel Sheets and Workbook Password Cracker')
     
     global crack_button
     
