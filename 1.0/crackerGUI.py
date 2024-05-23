@@ -27,6 +27,7 @@ def main():
         filepathVar = event.data
         xl_file_path.configure(placeholder_text=filepathVar)
         crack_button.pack(padx=60, pady=20, side=ctk.BOTTOM, fill=ctk.BOTH, expand=False)
+        label_done.pack_forget()
 
     label_heading = ctk.CTkLabel(root, text='Crack me a river', font=('Ariel', 24))
     label_heading.pack(padx=60, pady=20, side=ctk.TOP, fill=ctk.BOTH, expand=False)
@@ -34,7 +35,7 @@ def main():
     label_pic = ctk.CTkLabel(root, image=ctk.CTkImage(Image.open("1.0/images/fawkes.jpg"), size=(100,100)), text='')
     label_pic.pack(padx=60, pady=20, side=ctk.TOP, fill=ctk.BOTH, expand=False)
     
-    xl_file_path = ctk.CTkEntry(root, placeholder_text="+ Smid fil her", justify='center')
+    xl_file_path = ctk.CTkEntry(root, placeholder_text="+ Drop file here or enter path manually", justify='center')
     xl_file_path.pack(padx=60, pady=20, side=ctk.BOTTOM, fill=ctk.BOTH, expand=False)
 
     xl_file_path.drop_target_register(DND_ALL)
@@ -50,9 +51,9 @@ def main():
             result = result[1:-1]
         if cracker.crack(result):
             label_done.pack(padx=60, pady=20, side=ctk.BOTTOM, fill=ctk.BOTH, expand=False)
-            label_done.configure(text='DONE')
+            label_done.configure(text='DONE. All excel sheets have been cleared of passwords.')
 
-    crack_button = ctk.CTkButton(root, text='CRACK DET!', font=('Ariel', 16), command=crack_selected_xl_file)
+    crack_button = ctk.CTkButton(root, text='CRACK IT!', font=('Ariel', 16), command=crack_selected_xl_file)
 
     root.mainloop()
 
