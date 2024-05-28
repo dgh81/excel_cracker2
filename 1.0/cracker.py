@@ -23,5 +23,6 @@ def crack(dir_file_path):
     except Exception as e:
         print("Exception: ",e)
         return False
+    
     return True
 

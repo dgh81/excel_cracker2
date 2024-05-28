@@ -3,6 +3,7 @@ from tkinterdnd2 import TkinterDnD, DND_ALL
 from PIL import Image
 from idlelib.tooltip import Hovertip
 import cracker
+import convertToZip
 
 def main():
     
@@ -25,6 +26,7 @@ def main():
     
     def get_path(event):
         filepathVar = event.data
+        convertToZip.rename(filepathVar)
         xl_file_path.configure(placeholder_text=filepathVar)
         crack_button.pack(padx=60, pady=20, side=ctk.BOTTOM, fill=ctk.BOTH, expand=False)
         label_done.pack_forget()
